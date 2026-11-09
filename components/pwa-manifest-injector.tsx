@@ -7,7 +7,7 @@ import { getRuntimePwaDisplayMode, readPwaDisplayPreference, PWA_DISPLAY_MODE_CH
 export function PWAManifestInjector() {
   useEffect(() => {
     const root = document.documentElement;
-    const displayModeQueries = ["fullscreen", "standalone", "minimal-ui"].map(mode => (
+    const displayModeQueries = ["standalone", "standalone", "minimal-ui"].map(mode => (
       window.matchMedia(`(display-mode: ${mode})`)
     ));
 
