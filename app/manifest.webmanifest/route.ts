@@ -22,8 +22,8 @@ export function GET(request: NextRequest) {
   const manifest = preference === "fullscreen"
     ? {
         ...baseManifest,
-        display: "fullscreen",
-        display_override: ["fullscreen", "standalone"],
+        display: "standalone",
+        display_override: ["standalone", "standalone"],
       }
     : preference === "standalone"
       ? {
