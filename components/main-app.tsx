@@ -265,7 +265,7 @@ export function MainApp() {
 
     // 安卓全屏兜底。是否请求全屏在每次点击时读取，设置切换后无需重载。
     const isMobile = window.matchMedia("(max-width: 500px) and (hover: none) and (pointer: coarse)").matches;
-    if (!isMobile) return () => {
+    if (isMobile) return () => {
       cancelled = true;
       recommendationCleanup?.();
     };
