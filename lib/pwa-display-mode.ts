@@ -55,7 +55,7 @@ export function shouldRequestPwaFullscreen(): boolean {
   const preference = readPwaDisplayPreference(document.cookie);
   if (preference === "standalone") return false;
   if (preference === "fullscreen") return true;
-  return !/Edg/i.test(navigator.userAgent);
+  return /Edg/i.test(navigator.userAgent);
 }
 
 export function getRuntimePwaDisplayMode(): RuntimePwaDisplayMode {
