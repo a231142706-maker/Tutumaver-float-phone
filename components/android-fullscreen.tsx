@@ -14,7 +14,7 @@ export function AndroidFullscreen() {
     const isMobile = window.matchMedia(
       "(max-width: 500px) and (hover: none) and (pointer: coarse)"
     ).matches;
-    if (!isMobile) return;
+    if (isMobile) return;
 
     function tryFullscreen() {
       if (!shouldRequestPwaFullscreen()) return;
